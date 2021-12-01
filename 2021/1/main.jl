@@ -5,7 +5,8 @@ function read_input(filename::String)
             push!(measurements, line)
         end
     end
-    measurements = map(x->parse(Int,x),measurements)
+    #measurements = map(x->parse(Int,x),measurements)
+    measurements = parse.(Int, measurements)
     return measurements
 end
 
